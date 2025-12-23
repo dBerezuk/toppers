@@ -1,0 +1,158 @@
+@use './../helpers' as *;
+
+.hero {
+	@include tablet {
+		padding-inline: 0;
+		background-color: var(--color-blue-bg);
+	}
+
+	&__inner {
+		padding-block: var(--header-height) fluid(176, 96);
+		border-bottom-left-radius: rem(24);
+		border-bottom-right-radius: rem(24);
+
+		@include tablet-above {
+			background-color: var(--color-blue-bg);
+			border-inline: var(--border);
+			border-bottom: var(--border);
+		}
+
+		@include tablet {
+			padding-top: calc(var(--header-height) + rem(64));
+		}
+	}
+
+	&__header,
+	&__action {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__header {
+		row-gap: rem(48);
+		padding-inline: var(--header-padding-x);
+
+		@include mobile {
+			margin-bottom: rem(32);
+		}
+	}
+
+	&__title {
+		line-height: 1.35;
+		text-align: center;
+
+		> strong {
+			@include text-decoration(4%, 16%);
+		}
+	}
+
+	&__action {
+		row-gap: rem(32);
+	}
+
+	&__description {
+		font-size: rem(24);
+		line-height: 1.3;
+		color: var(--color-accent);
+	}
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		row-gap: fluid(60, 24);
+
+		&-info {
+			padding-inline: var(--header-padding-x);
+			font-size: fluid(20, 16);
+			line-height: 2.2;
+			text-align: center;
+			text-wrap: balance;
+
+			> svg {
+				vertical-align: middle;
+			}
+		}
+	}
+
+	&__badge-from {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+
+		@include tablet {
+			top: 10%;
+			bottom: auto;
+			rotate: 0deg;
+		}
+
+		@include mobile {
+			left: calc(var(--header-padding-x) * -1.5);
+		}
+	}
+
+	&__about-product {
+		position: relative;
+
+		&-content {
+			position: absolute;
+			left: var(--header-padding-x);
+			right: var(--header-padding-x);
+			top: 0;
+			bottom: 0;
+		}
+
+		&-button {
+			@include square(fluid(80, 56));
+
+			position: absolute;
+
+			&:nth-child(1) {
+				top: 49%;
+				right: 57%;
+
+				@include tablet {
+					top: 45%;
+					right: 38%;
+				}
+			}
+
+			&:nth-child(2) {
+				bottom: 5%;
+				right: 37%;
+
+				@include tablet {
+					right: 65%;
+				}
+			}
+
+			&:nth-child(3) {
+				top: 20%;
+				right: 22%;
+
+				@include tablet {
+					top: 12%;
+					right: 11%;
+				}
+			}
+
+			&:nth-child(4) {
+				top: 57%;
+				right: 7%;
+
+				@include tablet {
+					top: 57%;
+					right: 11%;
+				}
+			}
+		}
+
+		&-image {
+			height: rem(320);
+
+			@include mobile-s {
+				height: rem(240);
+			}
+		}
+	}
+}

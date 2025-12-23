@@ -1,0 +1,40 @@
+@use './../helpers' as *;
+
+.all-reviews {
+	&__items {
+		display: flex;
+		flex-direction: column;
+		row-gap: rem(16);
+	}
+
+	&__items-row {
+		display: flex;
+		align-items: stretch;
+		column-gap: rem(16);
+
+		&:first-child {
+			height: rem(560);
+
+			& > :is(.all-reviews__review, .all-reviews__card) {
+				width: 33%;
+			}
+		}
+
+		&:nth-child(2) {
+			& > :is(.all-reviews__review, .all-reviews__card) {
+				width: 50%;
+			}
+		}
+
+		&:nth-child(3) {
+			display: grid;
+			grid-template-columns: 66.25% 1fr;
+			gap: rem(16);
+
+			& > .all-reviews__review:nth-child(2) {
+				grid-row: 1 / 3;
+				grid-column: 2 / 3;
+			}
+		}
+	}
+}

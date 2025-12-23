@@ -1,0 +1,46 @@
+@use './../helpers' as *;
+
+.header {
+	padding-inline: calc(var(--header-padding-x) + rem(4));
+
+	position: absolute;
+	top: fluid(25, 6);
+	left: 0;
+	right: 0;
+	z-index: var(--z-base);
+	height: var(--header-height);
+
+	@include tablet {
+		padding-inline: var(--header-padding-x);
+	}
+
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		column-gap: rem(24);
+	}
+
+	&__menu-button {
+		@include reset-button;
+
+		display: flex;
+		align-items: center;
+		column-gap: rem(10);
+		padding: rem(8) rem(12);
+		font-size: rem(20);
+		font-weight: 500;
+		background-color: var(--color-white-80);
+		border-radius: rem(16);
+
+		&::before {
+			@include square(rem(24));
+
+			content: '';
+			display: block;
+			background-image: url('./../icons/lines.svg');
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+	}
+}

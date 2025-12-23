@@ -1,0 +1,25 @@
+@use 'normalize';
+@use 'fonts';
+@use 'variables';
+@use 'utils';
+@use 'globals';
+
+@use './blocks/button';
+@use './blocks/header';
+@use './blocks/label';
+@use './blocks/badge-from';
+@use './blocks/slider-arrows';
+@use './blocks/action-info';
+@use './blocks/section';
+@use './blocks/hero';
+@use './blocks/what-topper';
+@use './blocks/how-work';
+@use './blocks/comfort';
+@use './blocks/card';
+@use './blocks/what-makes';
+@use './blocks/reviews';
+@use './blocks/review';
+@use './blocks/memory-foam';
+@use './blocks/combo';
+@use './blocks/materials';
+@use './blocks/all-reviews';

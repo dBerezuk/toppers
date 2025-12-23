@@ -1,0 +1,40 @@
+@use './../helpers' as *;
+
+.label {
+	display: flex;
+	column-gap: rem(16);
+	align-items: center;
+	justify-content: space-between;
+	padding: rem(2) fluid(16, 12);
+	min-height: fluid(45, 32);
+	font-size: fluid(24, 16);
+	font-weight: 700;
+	line-height: 1;
+	color: var(--color-white);
+	background-color: var(--color-black);
+	border-radius: rem(16);
+
+	&--secondary {
+		min-height: rem(40);
+		font-size: rem(20);
+	}
+
+	&--big {
+		min-height: fluid(80, 40);
+		font-size: fluid(40, 20);
+	}
+
+	&--green {
+		background-color: var(--color-green);
+	}
+
+	&--yellow {
+		background-color: var(--color-orange);
+		color: var(--color-black);
+	}
+
+	&--white {
+		background-color: var(--color-white);
+		color: var(--color-accent);
+	}
+}

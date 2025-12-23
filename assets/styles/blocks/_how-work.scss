@@ -1,0 +1,96 @@
+@use './../helpers' as *;
+
+.how-work {
+	display: flex;
+	flex-direction: column;
+	row-gap: rem(16);
+
+	&__softens {
+		display: grid;
+		grid-template-columns: auto 33.4%;
+		column-gap: rem(16);
+
+		@include mobile {
+			overflow-x: scroll;
+			-ms-overflow-style: none;
+			overflow-x: -moz-scrollbars-none;
+			grid-template-columns: repeat(2, rem(400));
+			margin-right: calc(var(--container-padding-x) * -1);
+
+			&::-webkit-scrollbar {
+				height: 0;
+			}
+		}
+
+		@include mobile-s {
+			grid-template-columns: repeat(2, rem(320));
+		}
+	}
+
+	&__technology-card {
+		--bodyMaxWidth: #{rem(316)};
+
+		min-height: rem(600);
+		background-color: var(--color-blue-bg);
+
+		@include mobile {
+			min-height: rem(640);
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			background-image: image-set(var(--bgUrl) 1x, var(--bgUrl2x) 2x);
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center right;
+			pointer-events: none;
+
+			@include tablet {
+				top: rem(96);
+				height: rem(400);
+			}
+		}
+	}
+
+	&__eases {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: rem(16);
+
+		@include mobile {
+			overflow-x: scroll;
+			-ms-overflow-style: none;
+			overflow-x: -moz-scrollbars-none;
+			grid-template-columns: repeat(2, rem(400));
+			margin-right: calc(var(--container-padding-x) * -1);
+
+			&::-webkit-scrollbar {
+				height: 0;
+			}
+		}
+
+		@include mobile-s {
+			grid-template-columns: repeat(2, rem(320));
+		}
+
+		&-card {
+			min-height: rem(320);
+
+			@include mobile {
+			}
+
+			&--health-improvement {
+				background-color: var(--color-light-green);
+			}
+
+			&--levels {
+				background-color: var(--color-white);
+			}
+		}
+	}
+}

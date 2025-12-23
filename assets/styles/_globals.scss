@@ -1,0 +1,132 @@
+@use 'helpers' as *;
+
+html,
+body {
+	overflow-x: clip;
+}
+
+html.is-lock {
+	overflow: hidden;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	font-family: var(--font-family-base);
+	font-size: rem(20);
+	font-weight: 500;
+	line-height: 1.6;
+	color: var(--color-black);
+	background-color: var(--color-gray);
+}
+
+main {
+	flex-grow: 1;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+	font-family: var(--font-family-secondary);
+	font-weight: 700;
+	line-height: 1.1;
+}
+
+h1,
+.h1 {
+	@include fluid-text(80, 32);
+}
+
+h2,
+.h2 {
+	@include fluid-text(56, 32);
+}
+
+h3,
+.h3 {
+	@include fluid-text(32, 24);
+}
+
+h4,
+.h4 {
+	@include fluid-text(28, 22);
+}
+
+h5,
+.h5 {
+	font-size: rem(20);
+}
+
+h6,
+.h6 {
+	font-size: rem(18);
+}
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+	transition-duration: var(--transition-duration);
+}
+
+a {
+	color: inherit;
+
+	@include hover {
+		color: var(--color-accent);
+	}
+
+	&[class] {
+		text-decoration: none;
+	}
+}
+
+:focus-visible {
+	outline: rem(2) dashed var(--color-secondary);
+	outline-offset: rem(4);
+	transition-duration: 0s !important;
+}
+
+a,
+button {
+	&[aria-label] {
+		position: relative;
+
+		&::before {
+			@include abs-center;
+			@include square(rem(44));
+
+			content: '';
+		}
+	}
+}
+
+.description {
+	& > *:first-child {
+		margin-top: 0;
+	}
+
+	& > *:last-child {
+		margin-bottom: 0;
+	}
+
+	& > :is(h1, h2, h3, h4, h5, h6, ul, ol, dl) {
+		margin-block: rem(27);
+	}
+
+	& > p > strong {
+		@include text-decoration;
+	}
+}

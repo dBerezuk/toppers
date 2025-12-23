@@ -1,0 +1,37 @@
+@use './../helpers' as *;
+
+.action-info {
+	display: flex;
+	align-items: end;
+	column-gap: fluid(32, 24);
+
+	&__column {
+		display: flex;
+		align-items: end;
+		flex-direction: column;
+		row-gap: rem(32);
+
+		@include tablet {
+			display: contents;
+		}
+	}
+
+	&__image {
+		&:nth-child(2) {
+			width: rem(100);
+		}
+	}
+
+	&__button {
+		@include reset-button;
+
+		display: flex;
+		width: fit-content;
+		color: var(--color-accent);
+
+		@include tablet {
+			order: 1;
+			align-self: flex-start;
+		}
+	}
+}

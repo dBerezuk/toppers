@@ -1,0 +1,16 @@
+@use './../helpers' as *;
+
+.slider-arrows {
+	display: flex;
+	align-items: center;
+	column-gap: rem(16);
+
+	&__button {
+		@include square(rem(96));
+		@include flex-center;
+
+		& > svg {
+			@include square(rem(32));
+		}
+	}
+}

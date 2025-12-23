@@ -1,0 +1,59 @@
+@use './../helpers' as *;
+
+.comfort {
+	display: grid;
+	column-gap: rem(16);
+	padding: rem(16);
+	background-color: var(--color-white);
+	border-radius: rem(24);
+
+	@include tablet-above {
+		grid-template-columns: 33.4% auto;
+	}
+
+	@include tablet {
+		row-gap: rem(44);
+	}
+
+	&__body {
+		display: flex;
+		align-items: start;
+		flex-direction: column;
+		row-gap: rem(24);
+		padding: fluid(16, 4);
+	}
+
+	&__label {
+		background-color: var(--color-green);
+	}
+
+	&__description {
+		font-family: var(--font-family-secondary);
+		font-size: fluid(32, 24);
+		font-weight: 700;
+		line-height: 1.5;
+	}
+
+	&__company {
+		display: flex;
+		flex-direction: column;
+		row-gap: rem(16);
+		margin-top: auto;
+
+		&-title {
+			font-family: var(--font-family-secondary);
+			font-size: rem(20);
+		}
+	}
+
+	&__card {
+		--borderRadius: #{rem(16)};
+
+		aspect-ratio: 816 / 616;
+
+		@include tablet {
+			width: 100%;
+			max-height: rem(400);
+		}
+	}
+}

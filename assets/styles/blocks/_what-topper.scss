@@ -1,0 +1,29 @@
+@use './../helpers' as *;
+
+.what-topper {
+	&::before {
+		--url: url('./../images/what-topper/decor-circle-bg.svg');
+
+		top: 0;
+		right: 0;
+		width: rem(664);
+		height: rem(960);
+		background-image: url('./../images/what-topper/decor-circle-bg.svg');
+
+		@include mobile {
+			top: rem(88);
+		}
+	}
+
+	&__slider::part(container) {
+		overflow: visible;
+	}
+
+	&__media {
+		width: 100%;
+		min-height: rem(320);
+		object-fit: cover;
+		border: var(--border);
+		border-radius: rem(16);
+	}
+}

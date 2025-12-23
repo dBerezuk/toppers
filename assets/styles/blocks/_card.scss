@@ -1,0 +1,154 @@
+@use './../helpers' as *;
+
+.card {
+	--sizeButton: fluid(100, 80);
+
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	border-radius: var(--borderRadius, rem(24));
+
+	&:not(.card--not-border) {
+		border: var(--border);
+	}
+
+	&.has-overlay::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(180deg, rgba(24, 28, 37, 0) 50%, #181c25 100%),
+			url() transparent 50% / cover no-repeat;
+	}
+
+	&__media {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&__info-box {
+		position: absolute;
+		top: rem(16);
+		left: rem(16);
+		width: var(--infoBoxMaxWidth);
+		padding: fluid(24, 16);
+		background-color: var(--color-white-88);
+		border-radius: rem(16);
+	}
+
+	&__subtitle {
+		font-family: var(--font-family-secondary);
+		font-size: fluid(32, 24);
+		font-weight: 700;
+		line-height: 1.25;
+	}
+
+	&__vertical-label {
+		position: absolute;
+		top: fluid(32, 24);
+		right: fluid(32, 24);
+		min-width: fluid(45, 32);
+		padding: fluid(16, 12) rem(2);
+		writing-mode: sideways-lr;
+		text-orientation: mixed;
+		background-color: var(--color-green);
+	}
+
+	&__button {
+		flex-shrink: 0;
+
+		&--abs {
+			position: absolute;
+			right: fluid(32, 24);
+			bottom: fluid(32, 24);
+		}
+	}
+
+	&__controls {
+		position: absolute;
+		left: fluid(32, 24);
+		right: fluid(32, 24);
+		bottom: fluid(32, 24);
+		display: flex;
+		align-items: center;
+		column-gap: fluid(27, 16);
+
+		&-button {
+			@include square(fluid(100, 80));
+
+			background-color: var(--color-red-80);
+			border-radius: 50%;
+
+			& > svg {
+				width: fluid(33, 27);
+				height: fluid(38, 31);
+			}
+		}
+
+		&-title {
+			font-family: var(--font-family-base);
+			font-size: fluid(24, 20);
+			line-height: 1.33;
+			color: var(--color-white);
+		}
+	}
+
+	&__body {
+		--padding: #{fluid(32, 24)};
+
+		position: relative;
+		z-index: var(--z-base);
+		flex-grow: 1;
+		display: flex;
+		align-items: start;
+		flex-direction: column;
+		row-gap: rem(16);
+		padding: var(--padding);
+
+		& .card__body-title {
+			max-width: calc(var(--bodyMaxWidth) + var(--padding) * 2);
+
+			@include mobile-s {
+				max-width: rem(258);
+			}
+		}
+
+		&-title {
+			margin-top: auto;
+		}
+
+		&-tooltip {
+			display: flex;
+			align-items: center;
+			column-gap: rem(8);
+			font-size: rem(16);
+
+			&::after {
+				content: '';
+				display: block;
+				width: rem(16);
+				height: rem(16);
+				background-color: var(--color-accent);
+				border-radius: 50%;
+			}
+		}
+
+		&-footer {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			column-gap: rem(24);
+			width: 100%;
+			margin-top: auto;
+		}
+
+		&-decor-line {
+			max-width: rem(396);
+			width: 100%;
+			height: rem(32);
+			background-color: var(--color-orange);
+			border-radius: rem(24);
+		}
+	}
+}
