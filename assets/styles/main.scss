@@ -11,6 +11,7 @@
 @use './blocks/slider-arrows';
 @use './blocks/action-info';
 @use './blocks/section';
+@use './blocks/accordion';
 @use './blocks/hero';
 @use './blocks/what-topper';
 @use './blocks/how-work';
@@ -23,3 +24,6 @@
 @use './blocks/combo';
 @use './blocks/materials';
 @use './blocks/all-reviews';
+@use './blocks/promo';
+@use './blocks/need-topper';
+@use './blocks/got-questions';

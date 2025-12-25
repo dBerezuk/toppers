@@ -13,6 +13,10 @@
 	background-color: var(--color-accent);
 	border-radius: rem(48);
 
+	@include hover {
+		background-color: var(--color-secondary);
+	}
+
 	&--circle-icon {
 		@include square(rem(64));
 		@include flex-center;
@@ -21,11 +25,28 @@
 		background-color: var(--color-black-88);
 		border-radius: rem(40);
 
+		@include hover {
+			background-color: var(--color-white);
+			color: var(--color-secondary);
+		}
+
 		&.is-white {
 			background-color: var(--color-white-80);
+			color: var(--color-accent);
 
-			> svg :is(rect, path) {
-				fill: var(--color-accent);
+			@include hover {
+				background-color: var(--color-secondary);
+				color: var(--color-white);
+			}
+		}
+
+		&.is-white-alt {
+			background-color: var(--color-white);
+			color: var(--color-black);
+
+			@include hover {
+				background-color: var(--color-accent);
+				color: var(--color-white);
 			}
 		}
 
@@ -39,5 +60,10 @@
 		background-color: var(--color-black-88);
 		padding: rem(16) rem(32) rem(16) rem(16);
 		font-size: rem(20);
+
+		@include hover {
+			background-color: var(--color-white);
+			color: var(--color-accent);
+		}
 	}
 }

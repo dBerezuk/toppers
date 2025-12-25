@@ -5,13 +5,19 @@
 	grid-template-columns: 66% auto;
 	column-gap: rem(16);
 
+	&--reverse {
+		grid-template-columns: auto 66%;
+	}
+
 	@include mobile {
 		display: flex;
 		overflow-x: scroll;
+		scroll-snap-type: x mandatory;
 		-ms-overflow-style: none;
 		overflow-x: -moz-scrollbars-none;
 		grid-template-columns: repeat(2, rem(400));
 		margin-right: calc(var(--container-padding-x) * -1);
+		padding-right: var(--container-padding-x);
 
 		&::-webkit-scrollbar {
 			height: 0;
@@ -30,18 +36,16 @@
 		}
 	}
 
-	&-item {
-		@include mobile {
-			min-width: rem(320);
-		}
-	}
-
 	&__card {
 		min-height: rem(544);
+	}
 
+	&__item,
+	&__card {
 		@include mobile {
-			min-height: rem(320);
+			scroll-snap-align: start;
 			min-width: rem(320);
+			min-height: rem(320);
 		}
 	}
 }

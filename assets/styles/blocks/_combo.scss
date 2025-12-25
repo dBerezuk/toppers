@@ -25,6 +25,11 @@
 			margin-left: auto;
 			background-color: var(--color-white);
 			color: var(--color-black);
+
+			@include hover {
+				background-color: var(--color-black);
+				color: var(--color-white);
+			}
 		}
 	}
 

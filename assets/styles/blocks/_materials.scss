@@ -22,8 +22,8 @@
 
 	&__body {
 		display: flex;
-		align-items: start;
 		flex-direction: column;
+		align-items: start;
 		row-gap: rem(16);
 		height: 100%;
 		padding: fluid(32, 20);

@@ -291,16 +291,19 @@
 						</ul>
 					</div>
 				</header>
-				<div class="section__body container what-topper">
-					<swiper-container
-						class="what-topper__slider"
-						slides-per-view="1.22"
-						space-between="16"
-						loop="true"
-						navigation="true"
-						navigation-next-el="#what-topper__slider-arrow--next"
-						navigation-prev-el="#what-topper__slider-arrow--prev"
-						breakpoints='
+				<div
+					class="section__body section__body--has-decor-bg container what-topper"
+				>
+					<div>
+						<swiper-container
+							class="what-topper__slider"
+							slides-per-view="1.22"
+							space-between="16"
+							loop="true"
+							navigation="true"
+							navigation-next-el="#what-topper__slider-arrow--next"
+							navigation-prev-el="#what-topper__slider-arrow--prev"
+							breakpoints='
 							{
 								"481": {
 									"slidesPerView": "1.22"
@@ -310,34 +313,35 @@
 								}
 							}
       			'
-					>
-						<swiper-slide class="what-topper__slide">
-							<video
-								class="what-topper__media"
-								muted
-								loop
-								autoplay
-								src="./assets/videos/what-topper/slides/slide-1.mp4"
-								poster="./assets/images/what-topper/slides/slide-1.jpg"
-								width="1040"
-								height="600"
-							></video>
-						</swiper-slide>
-						<swiper-slide class="what-topper__slide">
-							<img
-								class="what-topper__media"
-								src="./assets/images/what-topper/slides/slide-2.jpg"
-								srcset="
-									./assets/images/what-topper/slides/slide-2.jpg    1x,
-									./assets/images/what-topper/slides/slide-2@2x.jpg 2x
-								"
-								width="1040"
-								height="600"
-								alt=""
-								loading="lazy"
-							/>
-						</swiper-slide>
-					</swiper-container>
+						>
+							<swiper-slide class="what-topper__slide">
+								<video
+									class="what-topper__media"
+									muted
+									loop
+									autoplay
+									src="./assets/videos/what-topper/slides/slide-1.mp4"
+									poster="./assets/images/what-topper/slides/slide-1.jpg"
+									width="1040"
+									height="600"
+								></video>
+							</swiper-slide>
+							<swiper-slide class="what-topper__slide">
+								<img
+									class="what-topper__media"
+									src="./assets/images/what-topper/slides/slide-2.jpg"
+									srcset="
+										./assets/images/what-topper/slides/slide-2.jpg    1x,
+										./assets/images/what-topper/slides/slide-2@2x.jpg 2x
+									"
+									width="1040"
+									height="600"
+									alt=""
+									loading="lazy"
+								/>
+							</swiper-slide>
+						</swiper-container>
+					</div>
 				</div>
 			</section>
 			<section class="section" aria-labelledby="how-work-title">
@@ -345,13 +349,19 @@
 					<strong class="section__label label label--secondary">
 						How does it work?
 					</strong>
-					<h2 class="section__title h1" id="how-work-title">
+					<h2
+						class="section__title has-strong-accent-color h1"
+						id="how-work-title"
+					>
 						<i>A mattress topper</i><br />
 						doesn’t replace your mattress —
 						<strong>it changes how it feels</strong>
 					</h2>
 				</header>
-				<div class="section__body container how-work">
+				<div
+					class="section__body section__body--has-decor-bg container how-work"
+					style="--url: url(./../images/how-work/starts.svg)"
+				>
 					<div class="how-work__comfort comfort">
 						<div class="comfort__body">
 							<strong class="comfort__label label">
@@ -654,7 +664,10 @@
 						<strong class="section__label label label--secondary">
 							What makes a topper feel just right?
 						</strong>
-						<h2 class="section__title h1" id="how-work-title">
+						<h2
+							class="section__title has-strong-accent-color h1"
+							id="how-work-title"
+						>
 							<i>It’s all in the materials —</i><br />
 							soft, breathable,
 							<strong>and responsibly made</strong>
@@ -1059,7 +1072,832 @@
 					</div>
 				</div>
 			</section>
-			<section class="all-reviews container">
+			<section class="section container" aria-labelledby="need-topper-title">
+				<header class="section__header container">
+					<strong class="section__label label label--secondary">
+						When do you actually need a topper?
+					</strong>
+					<h2
+						class="section__title has-strong-accent-color h1"
+						id="need-topper"
+					>
+						<i>A mattress topper</i>
+						makes almost any bed
+						<strong>softer, cooler, and more comfortable</strong>
+					</h2>
+				</header>
+				<div class="section__body need-topper">
+					<div class="need-topper__row-1">
+						<div class="need-topper__guests-card card">
+							<div class="card__info-box">
+								<strong class="card__info-box-label label label--secondary">
+									For guests and renting
+								</strong>
+								<h3 class="card__subtitle">Hosting guests?</h3>
+								<p class="card__info-box-description description">
+									Roll it out — instant comfy bed, zero fuss
+								</p>
+							</div>
+							<video
+								class="card__media"
+								muted=""
+								loop=""
+								autoplay=""
+								src="./assets/videos/when-need-topper/renting.mp4"
+								poster="./assets/images/when-need-topper/renting-poster.jpg"
+								width="848"
+								height="616"
+							></video>
+							<button
+								class="card__button card__button--abs button button--secondary"
+								type="button"
+							>
+								<svg
+									width="32"
+									height="32"
+									viewBox="0 0 32 32"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<rect y="14" width="32" height="4" rx="2" fill="white"></rect>
+									<rect
+										x="18"
+										width="32"
+										height="4"
+										rx="2"
+										transform="rotate(90 18 0)"
+										fill="white"
+									></rect>
+								</svg>
+								Click to learn more
+							</button>
+						</div>
+						<div
+							class="need-topper__reaction-card need-topper__reaction-card--uncomfortable card hidden-mobile"
+						>
+							<div class="card__body">
+								<span class="card__body-reaction">🙄</span>
+								<h3 class="card__body-title">
+									Your mattress<br />feels too firm or uncomfortable
+								</h3>
+								<div class="card__body-footer">
+									<div class="card__body-description description hidden-mobile">
+										<p>
+											Topper adds<br />
+											instant softness
+										</p>
+									</div>
+									<button
+										class="card__button button button--circle-icon"
+										type="button"
+									>
+										<svg
+											width="80"
+											height="80"
+											viewBox="0 0 80 80"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<rect
+												x="20"
+												y="38"
+												width="40"
+												height="4"
+												rx="2"
+												fill="#1D9EE9"
+											></rect>
+											<rect
+												x="42"
+												y="20"
+												width="40"
+												height="4"
+												rx="2"
+												transform="rotate(90 42 20)"
+												fill="#1D9EE9"
+											></rect>
+										</svg>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="need-topper__row-2">
+						<div
+							class="need-topper__reaction-card need-topper__reaction-card--uncomfortable card visible-mobile"
+						>
+							<div class="card__body">
+								<span class="card__body-reaction">🙄</span>
+								<div class="card__body-footer">
+									<h3 class="card__body-title">
+										Your mattress<br />feels too firm or uncomfortable
+									</h3>
+									<div class="card__body-description description hidden-mobile">
+										<p>
+											Topper adds<br />
+											instant softness
+										</p>
+									</div>
+									<button
+										class="card__button button button--circle-icon"
+										type="button"
+									>
+										<svg
+											width="80"
+											height="80"
+											viewBox="0 0 80 80"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<rect
+												x="20"
+												y="38"
+												width="40"
+												height="4"
+												rx="2"
+												fill="#1D9EE9"
+											></rect>
+											<rect
+												x="42"
+												y="20"
+												width="40"
+												height="4"
+												rx="2"
+												transform="rotate(90 42 20)"
+												fill="#1D9EE9"
+											></rect>
+										</svg>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="need-topper__info-pain-card card">
+							<div class="card__body">
+								<h3 class="card__body-title">
+									You wake up with back pain,<br />
+									every single morning
+								</h3>
+								<div class="card__body-footer">
+									<button
+										class="card__body-button--right button button--circle-icon is-white-alt"
+										type="button"
+									>
+										<svg
+											width="80"
+											height="80"
+											viewBox="0 0 80 80"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<rect
+												x="20"
+												y="38"
+												width="40"
+												height="4"
+												rx="2"
+												fill="#1D9EE9"
+											></rect>
+											<rect
+												x="42"
+												y="20"
+												width="40"
+												height="4"
+												rx="2"
+												transform="rotate(90 42 20)"
+												fill="#1D9EE9"
+											></rect>
+										</svg>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="need-topper__info-sleep-card card">
+							<div class="card__body">
+								<h3 class="card__body-title">
+									You sleep on a sofa, <br />guest bed or even the floor
+								</h3>
+								<div class="card__body-footer">
+									<div class="card__body-description description hidden-mobile">
+										<p>Topper turns almost <br />anything into a real bed</p>
+									</div>
+									<button
+										class="card__body-button--right button button--circle-icon"
+										type="button"
+									>
+										<svg
+											width="80"
+											height="80"
+											viewBox="0 0 80 80"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<rect
+												x="20"
+												y="38"
+												width="40"
+												height="4"
+												rx="2"
+												fill="#1D9EE9"
+											></rect>
+											<rect
+												x="42"
+												y="20"
+												width="40"
+												height="4"
+												rx="2"
+												transform="rotate(90 42 20)"
+												fill="#1D9EE9"
+											></rect>
+										</svg>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div
+							class="need-topper__reaction-card need-topper__reaction-card--sweating card visible-mobile"
+						>
+							<div class="card__body">
+								<span class="card__body-reaction">🥵</span>
+								<div class="card__body-footer">
+									<h3 class="card__body-title">
+										Can’t sleep ‘cause you’re sweating?
+									</h3>
+									<div class="card__body-description description hidden-mobile">
+										<p>We’ve got<br />cooling for that</p>
+									</div>
+									<button
+										class="card__button button button--circle-icon"
+										type="button"
+									>
+										<svg
+											width="80"
+											height="80"
+											viewBox="0 0 80 80"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<rect
+												x="20"
+												y="38"
+												width="40"
+												height="4"
+												rx="2"
+												fill="#1D9EE9"
+											></rect>
+											<rect
+												x="42"
+												y="20"
+												width="40"
+												height="4"
+												rx="2"
+												transform="rotate(90 42 20)"
+												fill="#1D9EE9"
+											></rect>
+										</svg>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="need-topper__row-3">
+						<div
+							class="need-topper__reaction-card need-topper__reaction-card--sweating card hidden-mobile"
+						>
+							<div class="card__body">
+								<span class="card__body-reaction">🥵</span>
+								<h3 class="card__body-title">
+									Can’t sleep ‘cause you’re sweating?
+								</h3>
+								<div class="card__body-footer">
+									<div class="card__body-description description hidden-mobile">
+										<p>We’ve got<br />cooling for that</p>
+									</div>
+									<button
+										class="card__button button button--circle-icon"
+										type="button"
+									>
+										<svg
+											width="80"
+											height="80"
+											viewBox="0 0 80 80"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<rect
+												x="20"
+												y="38"
+												width="40"
+												height="4"
+												rx="2"
+												fill="#1D9EE9"
+											></rect>
+											<rect
+												x="42"
+												y="20"
+												width="40"
+												height="4"
+												rx="2"
+												transform="rotate(90 42 20)"
+												fill="#1D9EE9"
+											></rect>
+										</svg>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="need-topper__guests-card card">
+							<div class="card__info-box">
+								<h3 class="card__subtitle">
+									Whatever your bed<br />looks like — a topper helps
+								</h3>
+								<p class="card__info-box-description description">
+									Not a miracle. Just smart design
+								</p>
+							</div>
+							<img
+								class="card__media"
+								src="./assets/images/when-need-topper/whatever.jpg"
+								srcset="
+									./assets/images/what-makes-topper/whatever.jpg    1x,
+									../assets/images/when-need-topper/whatever@2x.jpg 2x
+								"
+								width="848"
+								height="616"
+								alt=""
+								loading="lazy"
+							/>
+							<button
+								class="card__button card__button--abs button button--secondary"
+								type="button"
+							>
+								<svg
+									width="32"
+									height="32"
+									viewBox="0 0 32 32"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<rect y="14" width="32" height="4" rx="2" fill="white"></rect>
+									<rect
+										x="18"
+										width="32"
+										height="4"
+										rx="2"
+										transform="rotate(90 18 0)"
+										fill="white"
+									></rect>
+								</svg>
+								Click to learn more
+							</button>
+						</div>
+					</div>
+					<div class="need-topper__row-4 reviews reviews--reverse">
+						<div class="reviews__card card has-overlay">
+							<video
+								class="card__media"
+								muted=""
+								loop=""
+								autoplay=""
+								src="./assets/videos/what-topper/slides/slide-1.mp4"
+								poster="./assets/images/how-work/comfort-upgrade-3.jpg"
+								width="416"
+								height="616"
+							></video>
+							<strong class="label label--secondary card__vertical-label"
+								>Verified Buyer</strong
+							>
+							<div class="card__controls">
+								<button
+									class="card__controls-button button button--circle-icon"
+									type="button"
+								>
+									<svg
+										width="34"
+										height="39"
+										viewBox="0 0 34 39"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M31.3368 22.6749L6.33681 37.7344C5.67708 38.128 4.91319 38.3333 4.16667 38.3333C1.78993 38.3333 0 36.4167 0 34.2262V4.10714C0 1.93378 1.77083 0 4.16667 0C4.92083 0 5.67326 0.201251 6.33854 0.601697L31.3385 15.6612C32.5694 16.4115 33.3333 17.7292 33.3333 19.1667C33.3333 20.6042 32.5694 21.9219 31.3368 22.6749Z"
+											fill="white"
+										></path>
+									</svg>
+								</button>
+								<h3 class="card__controls-title">
+									Sophie L.,<br />
+									Manchester
+								</h3>
+							</div>
+						</div>
+						<ul class="reviews__list">
+							<li class="reviews__item">
+								<article class="reviews__review review review--green">
+									<header class="review__header">
+										<strong
+											class="review__label label label--secondary label--green"
+										>
+											Review
+										</strong>
+										<img
+											class="review__starts"
+											src="./assets/icons/starts.svg"
+											width="176"
+											height="32"
+											alt=""
+											loading="lazy"
+										/>
+									</header>
+									<blockquote class="review__description description">
+										<p>
+											Didn’t expect such a big difference. <br />
+											My back stopped aching after&nbsp;two&nbsp;nights. Totally
+											worth it.
+										</p>
+									</blockquote>
+									<cite class="review__author">Sophie L., Manchester</cite>
+								</article>
+							</li>
+							<li class="reviews__item">
+								<article class="reviews__review review">
+									<header class="review__header">
+										<strong class="review__label label label--secondary">
+											Review
+										</strong>
+										<img
+											class="review__starts"
+											src="./assets/icons/starts-2.svg"
+											width="176"
+											height="32"
+											alt=""
+											loading="lazy"
+										/>
+									</header>
+									<blockquote class="review__description description">
+										<p>
+											Didn’t expect such a big difference. <br />
+											My back stopped aching after&nbsp;two&nbsp;nights. Totally
+											worth it.
+										</p>
+									</blockquote>
+									<cite class="review__author">Sophie L., Manchester</cite>
+								</article>
+							</li>
+						</ul>
+					</div>
+					<div
+						class="need-topper__row-5 promo"
+						style="
+							--bgUrl: url(./../images/promo/bg.png);
+							--bgUrl2x: url(./../images/promo/bg@2x.png);
+						"
+					>
+						<div class="promo__badge-from badge-from">
+							<b class="badge-from__label label">From</b>
+							<strong class="badge-from__price">£88</strong>
+						</div>
+						<div class="promo__body">
+							<h3 class="promo__title h2">
+								A topper is a simple way to improve<br />
+								your sleep <strong>without buying a new mattress</strong>
+							</h3>
+							<h4 class="promo__subtitle h3">Works great for:</h4>
+							<ul class="promo__advantages">
+								<li class="promo__advantages-item">
+									<strong class="label label--secondary">
+										Adults with back pain
+									</strong>
+								</li>
+								<li class="promo__advantages-item">
+									<strong class="label label--secondary">
+										Guests who deserve better sleep
+									</strong>
+								</li>
+								<li class="promo__advantages-item">
+									<strong class="label label--secondary">
+										Students on tight budgets
+									</strong>
+								</li>
+								<li class="promo__advantages-item">
+									<strong class="label label--secondary">
+										Seniors who want more comfort
+									</strong>
+								</li>
+								<li class="promo__advantages-item">
+									<strong class="label label--secondary label--accent">
+										Or just… you, starting tomorrow
+									</strong>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section container" aria-labelledby="what-makes-title">
+				<header class="section__header">
+					<strong class="label label--secondary">
+						What makes our toppers different?
+					</strong>
+					<h2
+						class="section__title has-strong-accent-color h1"
+						id="what-makes-title"
+					>
+						Durability, comfort, and care —
+						<strong>built into every layer</strong>
+					</h2>
+				</header>
+				<div class="section__body">body in the future</div>
+			</section>
+			<section class="section container" aria-labelledby="what-makes-title">
+				<header class="section__header">
+					<ul class="section__labels">
+						<li class="section__labels-item">
+							<strong class="label label--secondary">Fast</strong>
+						</li>
+						<li class="section__labels-item">
+							<strong class="label label--secondary">Reliable</strong>
+						</li>
+						<li class="section__labels-item">
+							<strong class="label label--secondary">Local</strong>
+						</li>
+						<li class="section__labels-item">
+							<strong
+								class="label label--secondary label--white-alt label--has-icon"
+								style="
+									--iconUrl: url(./../images/flags/uk.jpg);
+									--iconUrl2x: url(./../images/flags/uk@2x.jpg);
+								"
+							>
+								Derbyshire
+							</strong>
+						</li>
+					</ul>
+					<h2
+						class="section__title has-strong-accent-color h1"
+						id="what-makes-title"
+					>
+						Delivery & Returns
+					</h2>
+					<div class="section__description description">
+						<p>
+							We ship from our UK warehouse — not from overseas — so most orders
+							arrive the next day
+						</p>
+					</div>
+				</header>
+				<div class="section__body">body in the future</div>
+			</section>
+			<section
+				class="section section--inner container"
+				aria-labelledby="got-questions-title"
+			>
+				<header class="section__header">
+					<strong class="label label--secondary">Got questions?</strong>
+					<h2 class="section__title has-strong-accent-color h1">
+						Here are some of the most common things
+						<strong>people ask before buying</strong>
+					</h2>
+				</header>
+				<div class="section__body got-questions">
+					<ul class="got-questions__list">
+						<li class="got-questions__item">
+							<div class="accordion">
+								<details
+									class="accordion__details"
+									name="got-questions-accordion"
+								>
+									<summary class="accordion__summary">
+										<span class="accordion__summary-title h3"
+											>What if my mattress is really old or sagging?</span
+										>
+										<span class="accordion__summary-description hidden-tablet">
+											A topper adds comfort — but it can’t fix a mattress that’s
+											past its prime
+										</span>
+										<span class="accordion__summary-icon"></span>
+									</summary>
+								</details>
+								<div class="accordion__body">
+									<div class="accordion__content">
+										<div class="accordion__content-inner">
+											<div class="accordion__description description">
+												<p>
+													A topper can do a lot — but it’s not magic. If your
+													mattress is deeply sagging or over 8–10 years old,
+													even the best topper won’t fully fix it. Think of a
+													topper as a comfort upgrade, not a structural repair.
+												</p>
+												<p>
+													That said, many of our customers do notice a
+													big improvement — even on older beds.
+												</p>
+											</div>
+											<div class="accordion__extra-description description">
+												<p>
+													A topper adds comfort —  but it can’t fix a mattress
+													that’s past its prime
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="got-questions__item">
+							<div class="accordion">
+								<details
+									class="accordion__details"
+									name="got-questions-accordion"
+								>
+									<summary class="accordion__summary">
+										<span class="accordion__summary-title h3"
+											>Will it actually stay cool at night?</span
+										>
+										<span class="accordion__summary-description hidden-tablet">
+											Yes — breathable layers keep heat away
+										</span>
+										<span class="accordion__summary-icon"></span>
+									</summary>
+								</details>
+								<div class="accordion__body">
+									<div class="accordion__content">
+										<div class="accordion__content-inner">
+											<div class="accordion__description description">
+												<p>
+													A topper can do a lot — but it’s not magic. If your
+													mattress is deeply sagging or over 8–10 years old,
+													even the best topper won’t fully fix it. Think of a
+													topper as a comfort upgrade, not a structural repair.
+												</p>
+												<p>Can I use it on a sofa or the floor?</p>
+											</div>
+											<div class="accordion__extra-description description">
+												<p>Yes — breathable layers keep heat away</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="got-questions__item">
+							<div class="accordion">
+								<details
+									class="accordion__details"
+									name="got-questions-accordion"
+								>
+									<summary class="accordion__summary">
+										<span class="accordion__summary-title h3"
+											>Can I use it on a sofa or the floor?</span
+										>
+										<span class="accordion__summary-description hidden-tablet">
+											Absolutely — works on any flat surface
+										</span>
+										<span class="accordion__summary-icon"></span>
+									</summary>
+								</details>
+								<div class="accordion__body">
+									<div class="accordion__content">
+										<div class="accordion__content-inner">
+											<div class="accordion__description description">
+												<p>
+													A topper can do a lot — but it’s not magic. If your
+													mattress is deeply sagging or over 8–10 years old,
+													even the best topper won’t fully fix it. Think of a
+													topper as a comfort upgrade, not a structural repair.
+												</p>
+												<p>Can I use it on a sofa or the floor?</p>
+											</div>
+											<div class="accordion__extra-description description">
+												<p>Absolutely — works on any flat surface</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="got-questions__item">
+							<div class="accordion" style="--bg: var(--color-beige)">
+								<details
+									class="accordion__details"
+									name="got-questions-accordion"
+								>
+									<summary class="accordion__summary">
+										<span class="accordion__summary-title h3"
+											>Can I return the topper if I don’t like it?</span
+										>
+										<span class="accordion__summary-description hidden-tablet">
+											Sure — 14 days, no questions asked
+										</span>
+										<span class="accordion__summary-icon"></span>
+									</summary>
+								</details>
+								<div class="accordion__body">
+									<div class="accordion__content">
+										<div class="accordion__content-inner">
+											<div class="accordion__description description">
+												<p>
+													A topper can do a lot — but it’s not magic. If your
+													mattress is deeply sagging or over 8–10 years old,
+													even the best topper won’t fully fix it. Think of a
+													topper as a comfort upgrade, not a structural repair.
+												</p>
+												<p>
+													That said, many of our customers do notice a
+													big improvement — even on older beds.
+												</p>
+											</div>
+											<div class="accordion__extra-description description">
+												<p>Sure — 14 days, no questions asked</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="got-questions__item">
+							<div class="accordion">
+								<details
+									class="accordion__details"
+									name="got-questions-accordion"
+								>
+									<summary class="accordion__summary">
+										<span class="accordion__summary-title h3"
+											>How long will the topper last?</span
+										>
+										<span class="accordion__summary-description hidden-tablet">
+											7–10 years with proper care
+										</span>
+										<span class="accordion__summary-icon"></span>
+									</summary>
+								</details>
+								<div class="accordion__body">
+									<div class="accordion__content">
+										<div class="accordion__content-inner">
+											<div class="accordion__description description">
+												<p>
+													A topper can do a lot — but it’s not magic. If your
+													mattress is deeply sagging or over 8–10 years old,
+													even the best topper won’t fully fix it. Think of a
+													topper as a comfort upgrade, not a structural repair.
+												</p>
+												<p>
+													That said, many of our customers do notice a
+													big improvement — even on older beds.
+												</p>
+											</div>
+											<div class="accordion__extra-description description">
+												<p>7–10 years with proper care</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="section container" aria-labelledby="promo-title">
+				<div
+					class="promo"
+					style="
+						--bgUrl: url(./../images/promo/bg.png);
+						--bgUrl2x: url(./../images/promo/bg@2x.png);
+					"
+				>
+					<div class="promo__badge-from badge-from">
+						<b class="badge-from__label label">From</b>
+						<strong class="badge-from__price">£88</strong>
+					</div>
+					<div class="promo__body promo__body--align-center">
+						<h2 class="promo__title" id="promo-title">
+							You don’t need a new mattress,<br />
+							just a topper that actually works for you
+						</h2>
+						<button class="promo__button button" type="button">
+							<span class="hidden-tablet">Help me choose a topper</span>
+							<span class="visible-tablet">Pick a topper</span>
+						</button>
+						<div class="promo__description description">
+							<p>Check sizes & prices</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section container" aria-labelledby="contact-title">
+				<header class="section__header">
+					<h2 class="section__title h1" id="contact-title">
+						We’re here 7 days a week
+					</h2>
+					<div class="section__description-alt description">
+						Monday to Sunday, from 9:00 AM to 8:00 PM
+					</div>
+				</header>
+				<div class="section__body">body in the future</div>
+			</section>
+			<section
+				class="all-reviews section container"
+				aria-labelledby="all-reviews-title"
+			>
+				<h2 class="visually-hidden" id="all-reviews-title">All reviews</h2>
 				<div class="all-reviews__items">
 					<div class="all-reviews__items-row">
 						<article class="all-reviews__review review review--blue">

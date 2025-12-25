@@ -2,8 +2,10 @@
 
 :root {
 	--color-black: #181c25;
-	--color-black-88: #181c25e0;
 	--color-black-96: #181c25f5;
+	--color-black-40: #181c256e;
+	--color-black-88: #181c25e0;
+	--color-black-32: #181c2552;
 	--color-white: #ffffff;
 	--color-white-88: #ffffffcc;
 	--color-white-80: #ffffffcc;
@@ -12,7 +14,7 @@
 	--color-blue-bg: #e0f3fe;
 	--color-orange: #ffbd24;
 	--color-orange-80: #ffbd24cc;
-	--color-beige: #FFECC0;
+	--color-beige: #ffecc0;
 	--color-green: #8fd300;
 	--color-red-80: #ff1e00cc;
 	--color-light-green: #e5f3cc;
@@ -40,4 +42,5 @@
 	--section-spacing-y: #{fluid(240, 160)};
 
 	--transition-duration: 0.2s;
+	--transition-duration-alt: 0.8s;
 }

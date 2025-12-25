@@ -5,6 +5,22 @@
 	flex-direction: column;
 	row-gap: rem(16);
 
+	&::before {
+		@include square(fluid(480, 240));
+
+		top: rem(-120);
+		right: 0;
+		background-image: var(--bgDecorUrl);
+
+		@include tablet {
+			top: rem(-60);
+		}
+
+		@include mobile {
+			top: rem(-32);
+		}
+	}
+
 	&__softens {
 		display: grid;
 		grid-template-columns: auto 33.4%;
@@ -12,10 +28,12 @@
 
 		@include mobile {
 			overflow-x: scroll;
+			scroll-snap-type: x mandatory;
 			-ms-overflow-style: none;
 			overflow-x: -moz-scrollbars-none;
 			grid-template-columns: repeat(2, rem(400));
 			margin-right: calc(var(--container-padding-x) * -1);
+			padding-right: var(--container-padding-x);
 
 			&::-webkit-scrollbar {
 				height: 0;
@@ -24,6 +42,10 @@
 
 		@include mobile-s {
 			grid-template-columns: repeat(2, rem(320));
+		}
+
+		& .card {
+			scroll-snap-align: start;
 		}
 	}
 
@@ -64,10 +86,12 @@
 
 		@include mobile {
 			overflow-x: scroll;
+			scroll-snap-type: x mandatory;
 			-ms-overflow-style: none;
 			overflow-x: -moz-scrollbars-none;
 			grid-template-columns: repeat(2, rem(400));
 			margin-right: calc(var(--container-padding-x) * -1);
+			padding-right: var(--container-padding-x);
 
 			&::-webkit-scrollbar {
 				height: 0;
@@ -82,6 +106,7 @@
 			min-height: rem(320);
 
 			@include mobile {
+				scroll-snap-align: start;
 			}
 
 			&--health-improvement {

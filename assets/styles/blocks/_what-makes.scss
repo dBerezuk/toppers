@@ -1,10 +1,6 @@
 @use './../helpers' as *;
 
 .what-makes {
-	display: flex;
-	flex-direction: column;
-	row-gap: rem(16);
-
 	&__combo {
 		display: grid;
 		gap: rem(16);

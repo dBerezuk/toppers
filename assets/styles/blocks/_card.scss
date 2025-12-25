@@ -29,19 +29,42 @@
 
 	&__info-box {
 		position: absolute;
+		z-index: var(--z-base);
 		top: rem(16);
 		left: rem(16);
-		width: var(--infoBoxMaxWidth);
+		right: rem(16);
+		width: var(--infoBoxMaxWidth, fit-content);
 		padding: fluid(24, 16);
 		background-color: var(--color-white-88);
+		backdrop-filter: blur(8px);
 		border-radius: rem(16);
+
+		@include mobile-s {
+			max-width: rem(306);
+		}
+
+		&-label {
+			display: inline-flex;
+
+			&:not(:last-child) {
+				margin-bottom: rem(32);
+			}
+		}
+
+		&-description {
+			text-wrap: balance;
+		}
 	}
 
 	&__subtitle {
 		font-family: var(--font-family-secondary);
 		font-size: fluid(32, 24);
 		font-weight: 700;
-		line-height: 1.25;
+		line-height: 1.5;
+
+		&:not(:last-child) {
+			margin-bottom: rem(8);
+		}
 	}
 
 	&__vertical-label {
@@ -62,6 +85,7 @@
 			position: absolute;
 			right: fluid(32, 24);
 			bottom: fluid(32, 24);
+			z-index: var(--z-base);
 		}
 	}
 
@@ -77,6 +101,7 @@
 		&-button {
 			@include square(fluid(100, 80));
 
+			flex-shrink: 0;
 			background-color: var(--color-red-80);
 			border-radius: 50%;
 
@@ -90,6 +115,7 @@
 			font-family: var(--font-family-base);
 			font-size: fluid(24, 20);
 			line-height: 1.33;
+			word-break: break-all;
 			color: var(--color-white);
 		}
 	}
@@ -106,16 +132,27 @@
 		row-gap: rem(16);
 		padding: var(--padding);
 
-		& .card__body-title {
+		&-title {
 			max-width: calc(var(--bodyMaxWidth) + var(--padding) * 2);
+			line-height: 1.5;
+			word-break: break-word;
+
+			&:not(:first-child) {
+				margin-top: auto;
+			}
 
 			@include mobile-s {
 				max-width: rem(258);
 			}
 		}
 
-		&-title {
-			margin-top: auto;
+		&-reaction {
+			font-size: rem(120);
+			line-height: 1;
+		}
+
+		&-reaction + &-title {
+			margin-top: rem(11);
 		}
 
 		&-tooltip {
@@ -141,6 +178,10 @@
 			column-gap: rem(24);
 			width: 100%;
 			margin-top: auto;
+		}
+
+		&-button--right {
+			margin-left: auto;
 		}
 
 		&-decor-line {

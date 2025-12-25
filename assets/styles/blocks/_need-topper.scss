@@ -1,0 +1,112 @@
+@use './../helpers' as *;
+
+.need-topper {
+	&__row-1 {
+		display: grid;
+		grid-template-columns: 66% auto;
+		column-gap: rem(16);
+		min-height: rem(616);
+
+		@include mobile {
+			grid-template-columns: 1fr;
+			min-height: rem(480);
+		}
+	}
+
+	&__row-2 {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: rem(16);
+		min-height: rem(320);
+
+		@include mobile {
+			overflow-x: scroll;
+			scroll-snap-type: x mandatory;
+			-ms-overflow-style: none;
+			overflow-x: -moz-scrollbars-none;
+			display: flex;
+			align-items: stretch;
+			margin-right: calc(var(--container-padding-x) * -1);
+			padding-right: var(--container-padding-x);
+
+			&::-webkit-scrollbar {
+				height: 0;
+			}
+		}
+	}
+
+	&__info-pain-card,
+	&__info-sleep-card,
+	&__reaction-card {
+		scroll-snap-align: start;
+
+		@include mobile {
+			min-width: rem(400);
+		}
+
+		@include mobile-s {
+			min-width: rem(320);
+		}
+	}
+
+	&__info-pain-card {
+		background-color: var(--color-black);
+		background-image: url(./../images/when-need-topper/circle-decor-bg.svg);
+		background-repeat: no-repeat;
+		background-position: bottom left;
+		background-size: rem(164);
+		color: var(--color-white);
+	}
+
+	&__info-sleep-card {
+		border: 4px dashed rgba(24, 28, 37, 0.32) !important;
+		border-spacing: 2px;
+	}
+
+	&__row-3 {
+		display: grid;
+		grid-template-columns: auto 66%;
+		column-gap: rem(16);
+		min-height: rem(616);
+
+		@include mobile {
+			grid-template-columns: 1fr;
+			min-height: rem(480);
+		}
+	}
+
+	&__reaction-card {
+		background-color: var(--color-white);
+		background-repeat: no-repeat;
+
+		&--uncomfortable {
+			background-image: url('./../images/when-need-topper/reaction-decor-bg-1.svg');
+			background-size: 100% rem(187);
+			background-position: center bottom;
+			background-size: auto;
+
+			@include mobile-s {
+				background-position: center bottom rem(-10);
+			}
+		}
+
+		&--sweating {
+			background-image: url('./../images/when-need-topper/reaction-decor-bg-2.svg');
+			background-size: 100% rem(600);
+			background-position: left top rem(-83);
+			background-size: auto;
+
+			@include tablet {
+				background-position: left top rem(-255);
+			}
+
+			@include mobile-s {
+				background-position: left rem(-100) top rem(-255);
+			}
+		}
+	}
+
+	&__row-5 {
+		border: var(--border);
+	}
+}
