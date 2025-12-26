@@ -1,9 +1,15 @@
 @use './../helpers' as *;
 
 .got-questions {
+	align-items: center;
+
 	&__list {
 		display: flex;
 		flex-direction: column;
 		row-gap: rem(16);
+	}
+
+	&__button {
+		margin-top: fluid(46, 32);
 	}
 }

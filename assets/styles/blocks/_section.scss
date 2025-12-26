@@ -14,6 +14,12 @@
 		margin-bottom: var(--section-spacing-y);
 	}
 
+	&--custom-spacing {
+		@include mobile {
+			margin-block: var(--spacingMobileTop) var(--spacingMobileBottom) !important;
+		}
+	}
+
 	&--inner {
 		padding: fluid(80, 24) fluid(96, 16) fluid(120, 80);
 		background-color: var(--color-white);

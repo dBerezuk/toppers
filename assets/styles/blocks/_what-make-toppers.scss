@@ -1,0 +1,170 @@
+@use './../helpers' as *;
+
+.what-make-toppers {
+	&__hero {
+		display: grid;
+		gap: rem(16);
+		min-height: rem(600);
+
+		@include mobile-above {
+			grid-template-columns: 66% auto;
+		}
+
+		@include mobile {
+			min-height: rem(480);
+		}
+
+		&-card {
+			background-color: var(--color-light-green);
+			background-image: url(./../images/what-make-toppers/guard-bg.svg);
+			background-repeat: no-repeat;
+			background-size: rem(320) rem(320);
+			background-position: top fluid(48, 24) right rem(-96);
+		}
+
+		&-info-card {
+			background-color: var(--color-black-96);
+			color: var(--color-white);
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: rem(48);
+				width: rem(40);
+				height: rem(100);
+				background-color: var(--color-orange);
+			}
+		}
+	}
+
+	&__slider {
+		overflow-x: scroll;
+		scroll-snap-type: x mandatory;
+		-ms-overflow-style: none;
+		overflow-x: -moz-scrollbars-none;
+		display: flex;
+		align-items: start;
+		column-gap: rem(16);
+		margin-right: calc(var(--container-padding-x) * -1);
+		padding-right: var(--container-padding-x);
+
+		&::-webkit-scrollbar {
+			height: 0;
+		}
+
+		& > * {
+			scroll-snap-align: start;
+			min-width: rem(400);
+			min-height: rem(400);
+
+			@include mobile-s {
+				min-width: rem(320);
+				min-height: rem(320);
+			}
+		}
+	}
+
+	&__comfort {
+		display: grid;
+		gap: rem(16);
+		min-height: rem(600);
+
+		@include mobile-above {
+			grid-template-columns: auto 66%;
+		}
+
+		@include mobile {
+			min-height: rem(480);
+		}
+
+		&-card {
+			background-color: var(--color-white);
+
+			&::before {
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: rem(360);
+				left: 0;
+				bottom: 0;
+				background-image: image-set(var(--bgUrl) 1x, var(--bgUrl2x) 2x);
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-position: left bottom;
+				pointer-events: none;
+			}
+		}
+	}
+
+	&__benefits {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: rem(16);
+
+		@include mobile {
+			display: flex;
+			overflow-x: scroll;
+			scroll-snap-type: x mandatory;
+			-ms-overflow-style: none;
+			overflow-x: -moz-scrollbars-none;
+			display: flex;
+			align-items: stretch;
+			column-gap: rem(16);
+			margin-right: calc(var(--container-padding-x) * -1);
+			padding-right: var(--container-padding-x);
+
+			&::-webkit-scrollbar {
+				height: 0;
+			}
+		}
+
+		& > * {
+			@include mobile {
+				scroll-snap-align: start;
+				min-width: rem(400);
+				min-height: rem(400);
+			}
+
+			@include mobile-s {
+				min-width: rem(320);
+				min-height: rem(320);
+			}
+		}
+
+		&-cards {
+			display: flex;
+			flex-direction: column;
+			gap: rem(16);
+
+			@include mobile {
+				display: contents;
+			}
+		}
+	}
+
+	&__sleep-better-card {
+		color: var(--color-white);
+		background-color: var(--color-accent);
+	}
+
+	&__health-improvement-card {
+		background-color: var(--color-light-green);
+	}
+
+	&__sleep-better-card,
+	&__health-improvement-card {
+		min-height: rem(320);
+
+		@include mobile {
+			scroll-snap-align: start;
+			min-width: rem(400);
+			min-height: rem(400);
+		}
+
+		@include mobile-s {
+			min-width: rem(320);
+			min-height: rem(320);
+		}
+	}
+}

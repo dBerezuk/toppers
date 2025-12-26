@@ -5,6 +5,7 @@
 
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	column-gap: rem(16);
 	padding: rem(16) rem(48);
 	font-size: rem(38);
@@ -64,6 +65,28 @@
 		@include hover {
 			background-color: var(--color-white);
 			color: var(--color-accent);
+		}
+	}
+
+	&--accent-transparent {
+		min-height: rem(80);
+		font-size: rem(24);
+		color: var(--color-accent);
+		background-color: transparent;
+		border: var(--border-accent);
+
+		@include hover {
+			color: var(--color-white);
+			border-color: var(--color-secondary);
+		}
+	}
+
+	&--green {
+		background-color: var(--color-green);
+
+		@include hover {
+			background-color: var(--color-green-alt);
+			color: var(--color-white);
 		}
 	}
 }
