@@ -796,8 +796,10 @@ button[aria-label]::before {
   align-items: center;
   gap: 0.5rem;
 }
-.section__title {
-  line-height: 1.5;
+@media (width <= 47.99875rem) {
+  .section__title {
+    line-height: 1.5;
+  }
 }
 .section__title > i {
   font-weight: 500;

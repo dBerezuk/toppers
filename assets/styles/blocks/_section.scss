@@ -68,7 +68,9 @@
 	}
 
 	&__title {
-		line-height: 1.5;
+		@include mobile {
+			line-height: 1.5;
+		}
 
 		& > i {
 			font-weight: 500;
