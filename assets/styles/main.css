@@ -443,8 +443,8 @@ button[aria-label]::before {
   align-items: center;
   justify-content: center;
   column-gap: 1rem;
-  padding: 1rem 3rem;
-  font-size: 2.375rem;
+  padding: 1.25rem 3rem;
+  font-size: 2rem;
   line-height: 1.25;
   color: var(--color-white);
   background-color: var(--color-accent);
@@ -483,7 +483,7 @@ button[aria-label]::before {
   }
 }
 .button--circle-icon.is-white {
-  background-color: var(--color-white-80);
+  background-color: var(--color-white);
   color: var(--color-accent);
 }
 @media (any-hover: hover) {
@@ -520,8 +520,11 @@ button[aria-label]::before {
 }
 .button--secondary {
   background-color: var(--color-black-88);
-  padding: 1rem 2rem 1rem 1rem;
+  padding: 1rem;
   font-size: 1.25rem;
+}
+.button--secondary:has(span) > span {
+  padding-right: 1rem;
 }
 @media (any-hover: hover) {
   .button--secondary:hover {
@@ -642,8 +645,9 @@ button[aria-label]::before {
   font-size: 1.25rem;
 }
 .label--big {
-  min-height: clamp(2.5rem, 1.5714285714rem + 3.8095238095vw, 5rem);
+  min-height: clamp(4rem, 3.6285714286rem + 1.5238095238vw, 5rem);
   font-size: clamp(1.25rem, 0.7857142857rem + 1.9047619048vw, 2.5rem);
+  border-radius: 1.5rem;
 }
 .label--green {
   background-color: var(--color-green);
@@ -736,10 +740,11 @@ button[aria-label]::before {
 }
 
 .section {
+  --rowGap: clamp(3rem, 2.4892857143rem + 2.0952380952vw, 4.375rem);
   position: relative;
   display: flex;
   flex-direction: column;
-  row-gap: clamp(3rem, 2.4892857143rem + 2.0952380952vw, 4.375rem);
+  row-gap: var(--rowGap);
 }
 .section:not(:first-child) {
   margin-top: var(--section-spacing-y);
@@ -789,6 +794,9 @@ button[aria-label]::before {
   flex-wrap: wrap;
   align-items: center;
   gap: 0.5rem;
+}
+.section__title {
+  line-height: 1.5;
 }
 .section__title > i {
   font-weight: 500;
@@ -850,6 +858,9 @@ button[aria-label]::before {
   .accordion:active {
     background-color: var(--color-blue-bg);
   }
+}
+.accordion:has(.accordion__details[open]) {
+  background-color: var(--color-blue-bg);
 }
 .accordion__details[open] .accordion__summary-description {
   opacity: 0;
@@ -999,6 +1010,14 @@ button[aria-label]::before {
   line-height: 1.3;
   color: var(--color-accent);
 }
+.hero__button {
+  min-width: 30.125rem;
+}
+@media (width <= 63.99875rem) {
+  .hero__button {
+    min-width: 21.125rem;
+  }
+}
 .hero__body {
   display: flex;
   flex-direction: column;
@@ -1125,8 +1144,8 @@ button[aria-label]::before {
   row-gap: 1rem;
 }
 .how-work::before {
-  width: clamp(15rem, 9.4285714286rem + 22.8571428571vw, 30rem);
-  height: clamp(15rem, 9.4285714286rem + 22.8571428571vw, 30rem);
+  width: clamp(20rem, 16.2857142857rem + 15.2380952381vw, 30rem);
+  height: clamp(20rem, 16.2857142857rem + 15.2380952381vw, 30rem);
   top: -7.5rem;
   right: 0;
   background-image: var(--bgDecorUrl);
@@ -1138,7 +1157,8 @@ button[aria-label]::before {
 }
 @media (width <= 47.99875rem) {
   .how-work::before {
-    top: -2rem;
+    top: -3.5rem;
+    right: 0.625rem;
   }
 }
 .how-work__softens {
@@ -1251,6 +1271,7 @@ button[aria-label]::before {
 @media (width <= 63.99875rem) {
   .comfort {
     row-gap: 2.75rem;
+    padding-bottom: 0.25rem;
   }
 }
 .comfort__body {
@@ -1261,6 +1282,7 @@ button[aria-label]::before {
   padding: clamp(0.25rem, -0.0285714286rem + 1.1428571429vw, 1rem);
 }
 .comfort__label {
+  width: -webkit-fill-available;
   background-color: var(--color-green);
 }
 .comfort__description {
@@ -1285,8 +1307,10 @@ button[aria-label]::before {
 }
 @media (width <= 63.99875rem) {
   .comfort__card {
-    width: 100%;
-    max-height: 25rem;
+    width: calc(100% + 1.5rem);
+    max-height: 22.125rem;
+    margin-left: -0.75rem;
+    aspect-ratio: 378/354;
   }
 }
 
@@ -1605,6 +1629,11 @@ button[aria-label]::before {
   background-color: var(--color-white);
   border-radius: 1.5rem;
 }
+@media (width <= 63.99875rem) {
+  .memory-foam {
+    margin-top: calc((var(--rowGap) + 1rem) * -1);
+  }
+}
 .memory-foam::before {
   content: "";
   position: absolute;
@@ -1726,8 +1755,14 @@ button[aria-label]::before {
 .combo__gelflex-title, .combo__gelflex-description {
   margin-bottom: 1.5rem;
 }
-.combo__gelflex-button {
+.combo__gelflex-footer {
   margin-top: auto;
+  display: flex;
+  align-items: center;
+  column-gap: 1.5rem;
+}
+.combo__gelflex-button {
+  flex-shrink: 0;
   margin-left: auto;
   background-color: var(--color-white);
   color: var(--color-black);
@@ -2004,6 +2039,11 @@ button[aria-label]::before {
   margin-inline: auto;
   margin-block: 2.5rem 2rem;
 }
+@media (width <= 30.06125rem) {
+  .promo__button {
+    width: 100%;
+  }
+}
 .promo__description {
   font-size: 1.5rem;
   color: var(--color-accent);
@@ -2018,6 +2058,26 @@ button[aria-label]::before {
   flex-wrap: wrap;
   align-items: center;
   gap: 0.5rem;
+}
+@media (width <= 47.99875rem) {
+  .promo__advantages {
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -ms-overflow-style: none;
+    overflow-x: -moz-scrollbars-none;
+    flex-wrap: nowrap;
+    margin-right: calc(clamp(2.5rem, 1.5714285714rem + 3.8095238095vw, 5rem) * -1);
+    padding-right: clamp(2.5rem, 1.5714285714rem + 3.8095238095vw, 5rem);
+  }
+  .promo__advantages::-webkit-scrollbar {
+    height: 0;
+  }
+}
+@media (width <= 47.99875rem) {
+  .promo__advantages-item {
+    scroll-snap-align: start;
+    white-space: nowrap;
+  }
 }
 
 .need-topper__row-1 {
@@ -2135,6 +2195,11 @@ button[aria-label]::before {
 }
 .got-questions__button {
   margin-top: clamp(2rem, 1.675rem + 1.3333333333vw, 2.875rem);
+}
+@media (width <= 30.06125rem) {
+  .got-questions__button {
+    width: 100%;
+  }
 }
 
 .delivery-returns__grid {
@@ -2347,6 +2412,11 @@ button[aria-label]::before {
 @media (width <= 47.99875rem) {
   .what-make-toppers__benefits-cards {
     display: contents;
+  }
+}
+@media (width <= 47.99875rem) {
+  .what-make-toppers__benefits-video-card {
+    order: -1;
   }
 }
 .what-make-toppers__sleep-better-card {

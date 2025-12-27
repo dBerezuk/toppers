@@ -429,7 +429,10 @@
 										fill="white"
 									/>
 								</svg>
-								Click to learn more
+								<span>
+									<span class="hidden-tablet">Click</span
+									><span class="visible-tablet">Tab</span> to learn more
+								</span>
 							</button>
 						</div>
 					</div>
@@ -779,34 +782,27 @@
 							</div>
 						</div>
 						<button
-							class="memory-foam__button button button--circle-icon"
+							class="memory-foam__button button button--secondary"
 							type="button"
 						>
 							<svg
-								width="80"
-								height="80"
-								viewBox="0 0 80 80"
+								width="32"
+								height="32"
+								viewBox="0 0 32 32"
 								fill="none"
 								xmlns="http://www.w3.org/2000/svg"
 							>
+								<rect y="14" width="32" height="4" rx="2" fill="white"></rect>
 								<rect
-									x="20"
-									y="38"
-									width="40"
+									x="18"
+									width="32"
 									height="4"
 									rx="2"
-									fill="#1D9EE9"
-								></rect>
-								<rect
-									x="42"
-									y="20"
-									width="40"
-									height="4"
-									rx="2"
-									transform="rotate(90 42 20)"
-									fill="#1D9EE9"
+									transform="rotate(90 18 0)"
+									fill="white"
 								></rect>
 							</svg>
+							<span class="visible-tablet">Tab to learn more</span>
 						</button>
 					</div>
 					<div class="what-makes__reviews reviews">
@@ -912,43 +908,53 @@
 								alt=""
 							/>
 							<h3 class="combo__gelflex-title h2">Gelflex</h3>
-							<div class="combo__gelflex-description description">
+							<div class="combo__gelflex-description description hidden-mobile">
 								<p>
 									Cool-touch foam that enhances airflow and keeps a comfortable
 									sleeping temperature.
 								</p>
 								<p>Perfect if you tend to overheat at night</p>
 							</div>
-							<button
-								class="combo__gelflex-button button button--circle-icon"
-								type="button"
-							>
-								<svg
-									width="80"
-									height="80"
-									viewBox="0 0 80 80"
-									fill="none"
-									xmlns="http://www.w3.org/2000/svg"
+							<div class="combo__gelflex-footer">
+								<div
+									class="combo__gelflex-footer-description description visible-mobile"
 								>
-									<rect
-										x="20"
-										y="38"
-										width="40"
-										height="4"
-										rx="2"
-										fill="#1D9EE9"
-									></rect>
-									<rect
-										x="42"
-										y="20"
-										width="40"
-										height="4"
-										rx="2"
-										transform="rotate(90 42 20)"
-										fill="#1D9EE9"
-									></rect>
-								</svg>
-							</button>
+									<p>
+										Cool-touch foam that enhances airflow and keeps a
+										comfortable sleeping temperature.
+									</p>
+								</div>
+								<button
+									class="combo__gelflex-button button button--circle-icon"
+									type="button"
+								>
+									<svg
+										width="80"
+										height="80"
+										viewBox="0 0 80 80"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<rect
+											x="20"
+											y="38"
+											width="40"
+											height="4"
+											rx="2"
+											fill="#1D9EE9"
+										></rect>
+										<rect
+											x="42"
+											y="20"
+											width="40"
+											height="4"
+											rx="2"
+											transform="rotate(90 42 20)"
+											fill="#1D9EE9"
+										></rect>
+									</svg>
+								</button>
+							</div>
 						</div>
 						<div
 							class="combo__popular"
@@ -966,11 +972,21 @@
 									Together, they bring the best of both worlds
 								</h3>
 								<div class="combo__popular-info">
-									<div class="combo__popular-description description">
+									<div
+										class="combo__popular-description description hidden-mobile"
+									>
 										<p>
 											Softness without overheating, support without being too
 											firm. That’s why this combo is our most popular choice —
 											you can feel the difference from the first night
+										</p>
+									</div>
+									<div
+										class="combo__popular-description description visible-mobile"
+									>
+										<p>
+											Softness without overheating, support without being too
+											firm
 										</p>
 									</div>
 									<button
@@ -1134,7 +1150,7 @@
 										fill="white"
 									></rect>
 								</svg>
-								Click to learn more
+								<span class="hidden-mobile">Click to learn more</span>
 							</button>
 						</div>
 						<div
@@ -1194,7 +1210,7 @@
 								<span class="card__body-reaction">🙄</span>
 								<div class="card__body-footer">
 									<h3 class="card__body-title">
-										Your mattress<br />feels too firm or uncomfortable
+										Your mattress feels firm or uncomfortable
 									</h3>
 									<div class="card__body-description description hidden-mobile">
 										<p>
@@ -1451,7 +1467,7 @@
 										fill="white"
 									></rect>
 								</svg>
-								Click to learn more
+								<span class="hidden-mobile">Click to learn more</span>
 							</button>
 						</div>
 					</div>
@@ -1621,7 +1637,9 @@
 								<strong class="label label--big label--green"
 									>Built to last</strong
 								>
-								<div class="card__body-description-alt description">
+								<div
+									class="card__body-description-alt description hidden-mobile"
+								>
 									Click to learn more about expected lifespan
 								</div>
 								<div class="card__body-footer">
@@ -1989,7 +2007,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="card has-overlay">
+						<div class="what-make-toppers__benefits-video-card card has-overlay">
 							<video
 								class="card__media"
 								muted=""

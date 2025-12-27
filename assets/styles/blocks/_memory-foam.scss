@@ -8,6 +8,10 @@
 	background-color: var(--color-white);
 	border-radius: rem(24);
 
+	@include tablet {
+		margin-top: calc((var(--rowGap) + rem(16)) * -1);
+	}
+
 	&::before {
 		content: '';
 		position: absolute;

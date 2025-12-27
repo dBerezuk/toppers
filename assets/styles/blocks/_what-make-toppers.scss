@@ -141,6 +141,12 @@
 				display: contents;
 			}
 		}
+
+		&-video-card {
+			@include mobile {
+				order: -1;
+			}
+		}
 	}
 
 	&__sleep-better-card {

@@ -11,5 +11,9 @@
 
 	&__button {
 		margin-top: fluid(46, 32);
+
+		@include mobile-s {
+			width: 100%;
+		}
 	}
 }

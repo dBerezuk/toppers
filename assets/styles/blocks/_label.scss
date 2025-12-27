@@ -29,8 +29,9 @@
 	}
 
 	&--big {
-		min-height: fluid(80, 40);
+		min-height: fluid(80, 64);
 		font-size: fluid(40, 20);
+		border-radius: rem(24);
 	}
 
 	&--green {

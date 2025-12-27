@@ -57,6 +57,14 @@
 		color: var(--color-accent);
 	}
 
+	&__button {
+		min-width: rem(482);
+
+		@include tablet {
+			min-width: rem(338);
+		}
+	}
+
 	&__body {
 		display: flex;
 		flex-direction: column;

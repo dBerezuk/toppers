@@ -68,6 +68,10 @@
 	&__button {
 		margin-inline: auto;
 		margin-block: rem(40) rem(32);
+
+		@include mobile-s {
+			width: 100%;
+		}
 	}
 
 	&__description {
@@ -86,5 +90,25 @@
 		flex-wrap: wrap;
 		align-items: center;
 		gap: rem(8);
+
+		@include mobile {
+			overflow-x: scroll;
+			scroll-snap-type: x mandatory;
+			-ms-overflow-style: none;
+			overflow-x: -moz-scrollbars-none;
+			flex-wrap: nowrap;
+			margin-right: calc(fluid(80, 40) * -1);
+			padding-right: fluid(80, 40);
+			&::-webkit-scrollbar {
+				height: 0;
+			}
+		}
+
+		&-item {
+			@include mobile {
+				scroll-snap-align: start;
+				white-space: nowrap;
+			}
+		}
 	}
 }

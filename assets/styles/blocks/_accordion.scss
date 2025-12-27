@@ -10,6 +10,10 @@
 		background-color: var(--color-blue-bg);
 	}
 
+	&:has(&__details[open]) {
+		background-color: var(--color-blue-bg);
+	}
+
 	&__details[open] &__summary-description {
 		@include hide;
 	}

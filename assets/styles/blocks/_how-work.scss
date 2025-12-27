@@ -6,7 +6,7 @@
 	row-gap: rem(16);
 
 	&::before {
-		@include square(fluid(480, 240));
+		@include square(fluid(480, 320));
 
 		top: rem(-120);
 		right: 0;
@@ -17,7 +17,8 @@
 		}
 
 		@include mobile {
-			top: rem(-32);
+			top: rem(-56);
+			right: rem(10);
 		}
 	}
 

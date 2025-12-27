@@ -20,8 +20,15 @@
 			margin-bottom: rem(24);
 		}
 
-		&-button {
+		&-footer {
 			margin-top: auto;
+			display: flex;
+			align-items: center;
+			column-gap: rem(24);
+		}
+
+		&-button {
+			flex-shrink: 0;
 			margin-left: auto;
 			background-color: var(--color-white);
 			color: var(--color-black);

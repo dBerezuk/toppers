@@ -13,6 +13,7 @@
 
 	@include tablet {
 		row-gap: rem(44);
+		padding-bottom: rem(4);
 	}
 
 	&__body {
@@ -24,6 +25,7 @@
 	}
 
 	&__label {
+		width: -webkit-fill-available;
 		background-color: var(--color-green);
 	}
 
@@ -52,8 +54,10 @@
 		aspect-ratio: 816 / 616;
 
 		@include tablet {
-			width: 100%;
-			max-height: rem(400);
+			width: calc(100% + rem(24));
+			max-height: rem(354);
+			margin-left: rem(-12);
+			aspect-ratio: 378 / 354;
 		}
 	}
 }

@@ -7,8 +7,8 @@
 	align-items: center;
 	justify-content: center;
 	column-gap: rem(16);
-	padding: rem(16) rem(48);
-	font-size: rem(38);
+	padding: rem(20) rem(48);
+	font-size: rem(32);
 	line-height: 1.25;
 	color: var(--color-white);
 	background-color: var(--color-accent);
@@ -32,7 +32,7 @@
 		}
 
 		&.is-white {
-			background-color: var(--color-white-80);
+			background-color: var(--color-white);
 			color: var(--color-accent);
 
 			@include hover {
@@ -59,8 +59,12 @@
 
 	&--secondary {
 		background-color: var(--color-black-88);
-		padding: rem(16) rem(32) rem(16) rem(16);
+		padding: rem(16);
 		font-size: rem(20);
+
+		&:has(span) > span {
+			padding-right: rem(16);
+		}
 
 		@include hover {
 			background-color: var(--color-white);
