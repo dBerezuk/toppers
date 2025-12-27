@@ -221,6 +221,7 @@ details summary::marker {
   --color-secondary: #0077ff;
   --color-blue-bg: #e0f3fe;
   --color-orange: #ffbd24;
+  --color-orange-48: #ffbd247a;
   --color-orange-80: #ffbd24cc;
   --color-beige: #ffecc0;
   --color-green: #8fd300;
@@ -1512,7 +1513,7 @@ button[aria-label]::before {
   max-width: 24.75rem;
   width: 100%;
   height: 2rem;
-  background-color: var(--color-orange);
+  background-color: var(--color-orange-48);
   border-radius: 1.5rem;
 }
 
