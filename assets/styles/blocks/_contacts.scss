@@ -31,6 +31,10 @@
 		border: #{var(--border)};
 		border-radius: rem(24);
 
+		@include mobile-s {
+			background-size: 65%;
+		}
+
 		&-button {
 			min-height: rem(80);
 			font-size: rem(32);
