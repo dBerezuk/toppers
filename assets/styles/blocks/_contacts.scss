@@ -34,6 +34,10 @@
 		&-button {
 			min-height: rem(80);
 			font-size: rem(32);
+
+			@include mobile {
+				width: 100%;
+			}
 		}
 
 		&-action {

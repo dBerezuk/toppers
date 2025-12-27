@@ -2482,6 +2482,11 @@ button[aria-label]::before {
   min-height: 5rem;
   font-size: 2rem;
 }
+@media (width <= 47.99875rem) {
+  .contacts__chat-button {
+    width: 100%;
+  }
+}
 .contacts__chat-action {
   display: flex;
   align-items: center;
